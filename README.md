@@ -10,13 +10,14 @@ Simple lowercasing middleware for Koa 2.
 
 ## Usage:
 
-```
+```javascript
 import lower from 'koa-lowercase'
 
 // other stuff
 
 app.use(lower)
 
+// probably more other stuff
 ```
 
 ## License:
