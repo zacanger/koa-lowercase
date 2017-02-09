@@ -1,10 +1,10 @@
-const lowercase = async (ctx, next) => {
-  if (/[A-Z]/.test(ctx.url)) {
-    ctx.status = 301
-    ctx.redirect(ctx.url.toLowerCase())
-  } else {
-    await next()
-  }
-}
-
-export default lowercase
+require('babel-register')({
+  babelrc: false
+, presets: [ require('babel-preset-latest') ]
+, plugins: [
+    require('babel-plugin-transform-es2015-modules-commonjs')
+  , require('babel-plugin-transform-async-to-generator')
+  ]
+})
+require('babel-polyfill')
+module.exports = require('./src')
