@@ -1,6 +1,6 @@
 {
   "name": "koa-lowercase",
-  "description": "koa-lowercase",
+  "description": "Simple lowercasing middleware for Koa 2.",
   "version": "0.0.1",
   "author": {
     "name": "Zac Anger",
@@ -8,9 +8,8 @@
     "url": "http://zacanger.com"
   },
   "license": "WTFPL",
-  "main": "index.js",
+  "main": "dist.js",
   "scripts": {
-    "start": "node index",
     "test": ""
   },
   "homepage": "https://github.com/zacanger/koa-lowercase#readme",
@@ -20,8 +19,11 @@
   },
   "bugs": "https://github.com/zacanger/koa-lowercase/issues",
   "keywords": [
-    "",
-    "koa-lowercase"
+    "koa",
+    "koa-lowercase",
+    "koa2",
+    "lowercase",
+    "middleware"
   ],
   "dependencies": {},
   "devDependencies": {},
