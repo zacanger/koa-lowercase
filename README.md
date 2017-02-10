@@ -21,8 +21,8 @@ app.use(lower)
 ```
 
 __Please note__ this module is for Koa 2. If you're using Koa 1, consider
-[this module](http://www.npm.im/koa-lowercase-url) or
-[this one](http://npm.im/koa-lowercase-path).
+[this module](https://www.npmjs.com/koa-lowercase-url) or
+[this one](https://npmjs.com/koa-lowercase-path).
 
 ## License:
 
