@@ -20,6 +20,8 @@ app.use(lower)
 // probably more other stuff
 ```
 
+If you're using `require` you'll need to do `require('koa-lowercase').default`.
+
 __Please note__ this module is for Koa 2. If you're using Koa 1, consider
 [this module](https://www.npmjs.com/koa-lowercase-url) or
 [this one](https://npmjs.com/koa-lowercase-path).
