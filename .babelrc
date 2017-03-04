@@ -1,5 +1,5 @@
 {
-  "presets": [["latest", {"es2015": {"modules": false}}]],
+  "presets": [ ["env", {"es2015": {"modules": false}}], "babili" ],
   "plugins": [ "transform-es2015-modules-commonjs" ],
   "comments": false
 }

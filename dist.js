@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var lowercase=function lowercase(ctx,next){if(/[A-Z]/.test(ctx.url)){ctx.status=301;ctx.redirect(ctx.url.toLowerCase())}else{return next()}};exports.default=lowercase;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var lowercase=function(a,b){return /[A-Z]/.test(a.url)?void(a.status=301,a.redirect(a.url.toLowerCase())):b()};exports.default=lowercase;
