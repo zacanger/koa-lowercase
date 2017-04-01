@@ -1,10 +1,14 @@
 const lowercase = (ctx, next) => {
-  if (/[A-Z]/.test(ctx.url)) {
+  if (
+    /[A-Z]/.test(ctx.url) &&
+    ![ 'HEAD', 'PUT', 'DELETE' ].includes(ctx.method)
+  ) {
     ctx.status = 301
     ctx.redirect(ctx.url.toLowerCase())
-  } else {
-    return next()
+    return
   }
+
+  return next()
 }
 
 export default lowercase

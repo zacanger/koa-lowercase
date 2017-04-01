@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var lowercase=function(a,b){return /[A-Z]/.test(a.url)?void(a.status=301,a.redirect(a.url.toLowerCase())):b()};exports.default=lowercase;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var lowercase=function(a,b){return /[A-Z]/.test(a.url)&&!['HEAD','PUT','DELETE'].includes(a.method)?(a.status=301,void a.redirect(a.url.toLowerCase())):b()};exports.default=lowercase;
