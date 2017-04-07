@@ -5,7 +5,7 @@ const lowercase = (ctx, next) => {
     /[A-Z]/.test(op) &&
     ![ 'HEAD', 'PUT', 'DELETE' ].includes(ctx.method)
   ) {
-    const ld = `${op.toLowerCase()}?${querystring || ''}`
+    const ld = `${op.toLowerCase()}${querystring ? '?' + querystring : ''}`
     ctx.status = 301
     ctx.redirect(ld)
     return
