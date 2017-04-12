@@ -3,7 +3,7 @@ const lowercase = (ctx, next) => {
   const op = `${origin}${path}`
   if (
     /[A-Z]/.test(op) &&
-    ![ 'HEAD', 'PUT', 'DELETE' ].includes(ctx.method)
+    ![ 'POST', 'HEAD', 'PUT', 'DELETE' ].includes(ctx.method)
   ) {
     const ld = `${op.toLowerCase()}${querystring ? '?' + querystring : ''}`
     ctx.status = 301

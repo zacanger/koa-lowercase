@@ -22,7 +22,7 @@ app.use(lower)
 
 If you're using `require` you'll need to do `require('koa-lowercase').default`.
 
-`HEAD`, `PUT`, and `DELETE` are _not_ lowercased.
+`POST`, `HEAD`, `PUT`, and `DELETE` are _not_ lowercased.
 
 Querystrings are not lowercased.
 
