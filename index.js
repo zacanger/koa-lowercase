@@ -1,4 +1,4 @@
-const lowercase = (ctx, next) => {
+const lowercase = async (ctx, next) => {
   const { origin, path, querystring } = ctx.request
   const op = `${origin}${path}`
   if (

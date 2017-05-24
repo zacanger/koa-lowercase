@@ -1,7 +1,7 @@
 {
   "name": "koa-lowercase",
   "description": "Simple lowercasing middleware for Koa 2.",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "author": {
     "name": "Zac Anger",
     "email": "zac@zacanger.com",
@@ -29,11 +29,10 @@
   "devDependencies": {
     "babel-cli": "6.24.1",
     "babel-plugin-transform-es2015-modules-commonjs": "6.24.1",
-    "babel-preset-babili": "0.1.1",
-    "babel-preset-env": "1.5.1"
+    "babel-preset-latest-minimal": "1.1.2"
   },
   "engines": {
-    "node": ">=6.7.0"
+    "node": ">=7.6.0"
   },
   "typings": "koa-lowercase.d.ts"
 }

@@ -1,1 +1,19 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var lowercase=function(a,b){var c=a.request,d=c.origin,e=c.path,f=c.querystring,g=''+d+e;if(/[A-Z]/.test(g)&&!['POST','HEAD','PUT','DELETE'].includes(a.method)){var h=''+g.toLowerCase()+(f?'?'+f:'');return a.status=301,void a.redirect(h)}return b()};exports.default=lowercase;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+const lowercase = async (ctx, next) => {
+  const { origin, path, querystring } = ctx.request;
+  const op = `${origin}${path}`;
+  if (/[A-Z]/.test(op) && !['POST', 'HEAD', 'PUT', 'DELETE'].includes(ctx.method)) {
+    const ld = `${op.toLowerCase()}${querystring ? '?' + querystring : ''}`;
+    ctx.status = 301;
+    ctx.redirect(ld);
+    return;
+  }
+
+  return next();
+};
+
+exports.default = lowercase;
