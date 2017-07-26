@@ -1,0 +1,6 @@
+// @flow
+
+declare module 'koa-lowercase' {
+  declare function lowercase (ctx: any, next: () => Promise<any>): any
+  declare export default typeof lowercase
+}
