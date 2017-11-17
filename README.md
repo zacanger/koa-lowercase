@@ -32,4 +32,4 @@ __Please note__ this module is for Koa 2. If you're using Koa 1, consider
 
 ## License:
 
-[WTFPL](./LICENSE.md)
+[MIT](./LICENSE.md)
