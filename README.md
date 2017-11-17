@@ -11,13 +11,16 @@ Simple lowercasing middleware for Koa 2.
 ## Usage:
 
 ```javascript
+import Koa from 'koa'
 import lower from 'koa-lowercase'
 
-// other stuff
+const app = new Koa()
 
 app.use(lower)
+// other middlewares, routes, etc.
 
-// probably more other stuff
+app.listen(process.env.PORT || 3000)
+console.log(`Serving on ${port}`)
 ```
 
 If you're using `require` you'll need to do `require('koa-lowercase').default`.
