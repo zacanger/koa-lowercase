@@ -10,7 +10,8 @@
   "license": "MIT",
   "main": "dist.js",
   "scripts": {
-    "build": "babel index.js --out-file dist.js"
+    "build": "babel index.js --out-file dist.js",
+    "preversion": "npm run build"
   },
   "homepage": "https://github.com/zacanger/koa-lowercase#readme",
   "repository": {
