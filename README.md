@@ -23,8 +23,6 @@ app.listen(process.env.PORT || 3000)
 console.log(`Serving on ${port}`)
 ```
 
-If you're using `require` you'll need to do `require('koa-lowercase').default`.
-
 `POST`, `HEAD`, `PUT`, and `DELETE` are _not_ lowercased.
 
 Querystrings are not lowercased.
