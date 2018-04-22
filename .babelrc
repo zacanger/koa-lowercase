@@ -1,5 +1,5 @@
 {
   "presets": [ "latest-minimal" ],
-  "plugins": [ "transform-es2015-modules-commonjs" ],
+  "plugins": [ "add-module-exports" ],
   "comments": false
 }

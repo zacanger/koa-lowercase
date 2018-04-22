@@ -17,3 +17,4 @@ const lowercase = async (ctx, next) => {
 };
 
 exports.default = lowercase;
+module.exports = exports['default'];
