@@ -8,11 +8,7 @@
     "url": "http://zacanger.com"
   },
   "license": "MIT",
-  "main": "dist.js",
-  "scripts": {
-    "build": "babel index.js --out-file dist.js",
-    "preversion": "npm run build"
-  },
+  "main": "koa-lowercase.js",
   "homepage": "https://github.com/zacanger/koa-lowercase#readme",
   "repository": {
     "type": "git",
@@ -27,11 +23,7 @@
     "middleware"
   ],
   "dependencies": {},
-  "devDependencies": {
-    "babel-cli": "6.26.0",
-    "babel-plugin-add-module-exports": "0.2.1",
-    "babel-preset-latest-minimal": "1.1.2"
-  },
+  "devDependencies": {},
   "engines": {
     "node": ">=8.0.0"
   },
