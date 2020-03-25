@@ -1,13 +1,16 @@
-'use strict'
+/* eslint-disable fp/no-mutating-methods */
 
 Object.defineProperty(exports, '__esModule', {
-  value: true
+  value: true,
 })
 
 const lowercase = async (ctx, next) => {
   const { origin, path, querystring } = ctx.request
   const op = `${origin}${path}`
-  if (/[A-Z]/.test(op) && !['POST', 'HEAD', 'PUT', 'DELETE'].includes(ctx.method)) {
+  if (
+    /[A-Z]/.test(op) &&
+    !['POST', 'HEAD', 'PUT', 'DELETE'].includes(ctx.method)
+  ) {
     const ld = `${op.toLowerCase()}${querystring ? '?' + querystring : ''}`
     ctx.status = 301
     ctx.redirect(ld)

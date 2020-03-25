@@ -7,10 +7,16 @@
     "name": "Zac Anger",
     "url": "http://zacanger.com"
   },
+  "funding": {
+    "type": "ko-fi",
+    "url": "https://ko-fi.com/zacanger"
+  },
   "license": "LGPL-3.0",
   "main": "koa-lowercase.js",
   "scripts": {
-    "preversion": "sortpack && standard"
+    "preversion": "npm t",
+    "test": "npm run test:lint",
+    "test:lint": "eslint -c .eslintrc.json *.js"
   },
   "homepage": "https://github.com/zacanger/koa-lowercase#readme",
   "repository": {
@@ -27,15 +33,28 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "sortpack": "2.0.1",
-    "standard": "14.3.1"
+    "eslint": "6.8.0",
+    "eslint-plugin-zacanger": "1.1.3",
+    "husky": "4.2.3",
+    "lint-staged": "10.0.9",
+    "prettier": "2.0.2",
+    "sortpack": "2.1.3"
   },
   "engines": {
     "node": ">=8.0.0"
   },
   "typings": "koa-lowercase.d.ts",
-  "funding": {
-    "type": "ko-fi",
-    "url": "https://ko-fi.com/zacanger"
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
+    ],
+    "package.json": [
+      "sortpack"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
