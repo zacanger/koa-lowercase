@@ -1,7 +1,5 @@
-/* eslint-disable fp/no-mutating-methods */
-
 Object.defineProperty(exports, '__esModule', {
-  value: true,
+  value: true
 })
 
 const lowercase = async (ctx, next) => {

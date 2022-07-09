@@ -11,12 +11,12 @@
     "type": "ko-fi",
     "url": "https://ko-fi.com/zacanger"
   },
-  "license": "LGPL-3.0",
+  "license": "MIT",
   "main": "koa-lowercase.js",
   "scripts": {
     "preversion": "npm t",
     "test": "npm run test:lint",
-    "test:lint": "eslint -c .eslintrc.json *.js"
+    "test:lint": "standard"
   },
   "homepage": "https://github.com/zacanger/koa-lowercase#readme",
   "repository": {
@@ -31,30 +31,12 @@
     "lowercase",
     "middleware"
   ],
-  "dependencies": {},
   "devDependencies": {
-    "eslint": "7.15.0",
-    "eslint-plugin-zacanger": "2.2.0",
-    "husky": "4.3.5",
-    "lint-staged": "10.5.3",
-    "prettier": "2.2.1",
-    "sortpack": "2.1.11"
+    "sortpack": "2.3.0",
+    "standard": "17.0.0"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=16.0.0"
   },
-  "typings": "koa-lowercase.d.ts",
-  "lint-staged": {
-    "*.js": [
-      "prettier --write"
-    ],
-    "package.json": [
-      "sortpack"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  }
+  "typings": "koa-lowercase.d.ts"
 }
