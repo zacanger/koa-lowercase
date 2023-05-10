@@ -2,6 +2,8 @@
 
 Simple lowercasing middleware for Koa 2.
 
+[Donate](https://ko-fi.com/zacanger)
+
 --------
 
 ## Installation:
